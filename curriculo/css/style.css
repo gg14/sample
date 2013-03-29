@@ -1,0 +1,101 @@
+@charset "utf-8";
+/* CSS Document */
+.clear { clear:both;}
+
+ul { margin-left:-25px;}
+
+.centrar {
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	}
+
+.ui-icon-spain {  background-image: url(../images/flags/sp32.png) !important; }
+.ui-icon-uk {  background-image: url(../images/flags/uk32.png) !important; }
+
+.langflag {
+	background-position:0;
+	padding:0;
+    background-size: 32px 32px;
+    height: 24px;
+	width: 32px;
+	border-radius:2px;
+    margin-top: -2px !important;
+	margin-left: -16px !important;
+	}
+	
+#foto {
+	background-image:url(../images/foto.png);
+	background-position:right;
+	background-size: 123px 148px;
+	width:123px;
+	height:148px;
+	float:right;
+	}
+#datos ul {
+	margin: -15px 0 0 -5px;	}
+#datos ul li {
+	list-style:none;
+	margin:2px 0 2px -25px;
+	padding:2px;
+	}
+#datos ul li a { 
+	font-weight:normal;
+	text-decoration:none;	
+}
+
+.inline ul li {
+	list-style:none;
+	display:inline-block;
+	padding:0 5px 0 5px;
+	}
+	
+/* barra */
+.progress-bar {
+	background-color: #666;
+	height: 18px;
+	padding: 0px 2px 0px 2px;
+	margin: 0;			
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	          
+}
+
+.progress-bar span {
+	display: inline-block;
+	margin:2px 0;
+	height: 80%;	
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
+	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
+	box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
+}
+
+.barblue span { background-color: #57A7E5;  }
+.barps span { background-color:#81AFE1;  }
+.barfl span { background-color:#FF2929;  }
+.barfw span { background-color:#D8D514;  }
+.bardw span { background-color:#A4FF02;  }
+.bared span { background-color:#8F7AFE;  }
+.baril span { background-color:#FCAF23;  }
+.barpre span { background-color:#E04BFF;  }
+
+@-webkit-keyframes barra /* Safari and Chrome */
+{
+from { width:0;}
+to { }
+}
+
+.barra
+{
+animation: barra 3s;
+-moz-animation: barra 3s; /* Firefox */
+-webkit-animation: barra 3s; /* Safari and Chrome */
+-o-animation: barra 3s; /* Opera */
+}
+
+
+
