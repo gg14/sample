@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Documento sin título</title>
+<script>
+	function mostrar(combo)
+		{
+			//alert(combo.value);
+			//alert(combo.text);
+			//alert(combo.options[combo.selectedIndex].text);
+		}
+		
+	function caja (texto) {
+		//Salert(texto.value)
+		}
+
+	function pulsar(boton) {
+		boton.disabled=true;
+		}
+		
+// nota: si hay un formulario se le llega a traves del nombre del formulario y no por el document
+	function habilitar(area){
+		if (area.value !="")
+			{	
+				wboton=document.getElementById("miboton");			
+				wboton.disabled=false;
+			}
+		}
+	function verificar() {
+		alert(document.getElementById("edo").value);
+		}
+					
+	function marcar() {
+		for (i=0; i<document.formulario.elements.length; i++){
+			if (document.formulario.elements[i].type=="checkbox") {
+					document.formulario.elements[i].checked=true;;
+				}
+			}
+		}
+		
+	function desmarcar() {
+		for (i=0; i<document.formulario.elements.length; i++){
+			if (document.formulario.elements[i].type=="checkbox") {
+					document.formulario.elements[i].checked=false;;
+				}
+			}
+		}
+	function cuenta(valor) {
+		document.formulario.contador.value=valor.length;
+		}
+	function longitud(valor) {
+		var micadena = new String();
+		micadena = document.formulario.texto.value;
+		alert(micadena.length);
+		alert(micadena.toUpperCase());
+		alert(micadena.toLowerCase());
+		}
+						
+</script>
+
+</head>
+
+<body>
+
+<select name="combo" onChange="mostrar(this)">
+	<option value="">seleccione</option>
+	<option value="1">Guillermo</option>	
+    <option value="22">Alvaro</option>
+</select>
+
+<textarea name="area" onBlur="caja(this)" onKeyPress="habilitar(this)"></textarea>   
+<br>
+<input type="button" name="boton" value="enviar" onClick="pulsar(this)"/>
+<br>
+habilitar
+<br><br>
+<input type="button" name="miboton" id="miboton"  value="boton"  disabled/>
+<br><br>
+
+<input id="edo" type="radio" value="s" onClick="verificar()">soltero<br>
+<input id="edo" type="radio" value="c" onClick="verificar()">casado<br>
+<input id="edo" type="radio" value="v" onClick="verificar()">viudo<br>
+<br><br><br>
+<form id="formulario" name="formulario">
+<a href="#" onClick="marcar()">marcar todas</a>
+<a href="#" onClick="desmarcar()">desmarcar todas</a><br><br>
+<input type="checkbox" id="español">español<br>
+<input type="checkbox" id="ingles">ingles<br>
+<input type="checkbox" id="aleman">aleman<br>
+<hr>
+<textarea id="texto" onKeyUp="cuenta(this.value)"></textarea><br>
+<input type="text" id="contador"><br>
+<input type="button"  id="long"  value="longitud" onClick="longitud(this)" />
+<input type="button"  id="substr"  value="substr" onClick="substr(this)" />
+</form>
+
+
+
+</body>
+</html>

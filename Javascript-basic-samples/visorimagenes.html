@@ -1,0 +1,66 @@
+<HTML>
+<HEAD>
+<TITLE>Pagina071f1.htm Documento de prueba</TITLE>
+<script language="JavaScript">
+//Precarga de las imágenes
+var fuente_imagenes = new Array("imagenes/01.jpg", "imagenes/02.jpg", "imagenes/03.jpg", "imagenes/04.jpg", "imagenes/05.jpg");
+var imagenes = new Array();
+for (var i=0; i<fuente_imagenes.length; i++) {
+imagenes[i] = new Image();
+imagenes[i].src = fuente_imagenes[i];
+}
+// indica que imagen se muestra en el visor
+var imagen_actual=0;
+// muestra en el visor de imágenes la imagen actual
+function mostrar_imagen() {
+document.visor.src=imagenes[imagen_actual].src
+}
+// avanza a la siguiente imagen
+function siguiente() {
+imagen_actual++;
+if (imagen_actual == imagenes.length)
+imagen_actual=0;
+mostrar_imagen();
+}
+// retrocede a la imagen anterior
+function anterior() {
+imagen_actual--;
+if (imagen_actual == -1)
+imagen_actual = imagenes.length-1;
+mostrar_imagen();
+}
+// retrocede hasta la primera imagen
+function primera() {
+imagen_actual=0;
+mostrar_imagen();
+}
+// retrocede hasta la última imagen
+function ultima() {
+imagen_actual = imagenes.length-1;
+mostrar_imagen();
+}
+</script>
+</HEAD>
+<BODY>
+<center>
+<h1>Visor de Imágenes</h1>
+<table cellpadding=0 cellspacing=0 border=0>
+<tr>
+<td colspan=4>
+<img src='imagenes/01.jpg' name='visor' width=300 height=200 border=0>
+</td>
+</tr>
+<tr>
+<td align='right'>
+<a href="javascript: primera()"><img src="imagenes/primera.gif" alt="primera imagen" width=65 height=57 border=0></a></td>
+<td align='center'>
+<a href="javascript: anterior()"><img src="imagenes/anterior.gif" alt="retroceder imagen" width=65 height=57 border=0></a></td>
+<td align='left'>
+<a href="javascript: siguiente()"><img src="imagenes/siguiente.gif" alt="avanzar imagen" width=65 height=57 border=0></a></td>
+<td align='center'>
+<a href="javascript: ultima()"><img src="imagenes/ultima.gif" alt="ultima imagen" width=65 height=57 border=0></a></td>
+</tr>
+</table>
+</center>
+</BODY>
+</HTML>

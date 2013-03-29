@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Documento sin título</title>
+<script>
+function comprobaredad(valor)
+	{
+		if (isNaN(valor) && (valor!=""))
+			{
+				alert("edad invalida");
+				document.getElementById("edad").value="";
+				document.getElementById("edad").focus();
+			}
+		}
+
+function teclado(){ 
+	valor=(event.keyCode);
+	if (valor=="107") {
+		alert("tecla k pulsada");
+		}
+	}
+document.onkeypress = function keypress() {
+ if(event.keyCode==27) window.close();
+}
+
+function cambiar(caja) {
+	caja.style=caja.style.fontWeight="bold";
+	}
+function nocambiar(caja) {
+	caja.style=caja.style.fontWeight="normal";
+	}	
+	
+function salir () {
+	alert("chao");
+	}
+	
+		
+</script>
+</head>
+
+<body onUnload="salir()" onResize="alert('ajustando')">
+presionar escape para salir
+<hr>
+<input type="text" onBlur='if (this.value=="") alert("no deje campo en blanco");' /><br>
+<hr>
+edad<br>
+<input type="text" id="edad" name="edad"onBlur="comprobaredad(this.value)" />
+<hr>
+keypress<br>
+<input type="text" id="tecla" name="tecla" onKeyPress="teclado()" on onChange="this.value=this.value.toUpperCase();" />
+<hr>
+mouse, darle ok con enter sin soltar el mouse para que el 2do alert funcione<br>
+<input type="text" id="caja" name="caja" onMouseUp="alert('tecla soltada')" onMouseDown="alert('mouse pisado')" onMouseOver="cambiar(this)" onMouseOut="nocambiar(this)"/>
+
+<hr><br>
+on selec
+<textarea onSelect="alert('seleccioando')">
+hola mundo ! hola hola hola
+</textarea>
+<hr><br>
+<img src="#" onerror="alert('error al cargar la imagen')"/>
+<hr><br>
+
+
+</body>
+</html>
