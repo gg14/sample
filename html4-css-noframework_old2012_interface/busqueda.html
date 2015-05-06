@@ -1,0 +1,237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Viewmed</title>
+
+<link rel="stylesheet" href="css/font-awesome.min.css">
+    
+<script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.23.custom.min.js"></script>
+<link type="text/css" rel="stylesheet" href="css/jqueryui.css"/>
+
+<link type="text/css" rel="stylesheet" href="css/style.css"/>
+    
+<link href="css/modalPopLite.css" rel="stylesheet" type="text/css" />
+<script src="js/modalPopLite.min.js" type="text/javascript"></script>
+<style type="text/css">
+           
+#popup-datos {
+    width:570px;
+    height:400px;
+    background-color:white;
+    padding:10px;
+}
+    
+.btn-close { float:right;}
+
+</style>
+
+<script type="text/javascript">
+    $(function () {
+        $('#popup-datos').modalPopLite({ openButton: '#btn-datos', closeButton: '#close-btn', isModal: true });
+    });
+    
+</script>
+    
+</head>
+<body>
+<div class="contenedor">
+  <!--header--><!--fin header-->
+  <div class="clear"></div>
+  <!--tab green-->
+  <div class="bienvenida"> <span>Viewmed Online</span> <span>La red digital de salud</span> </div>
+  <!--fin tab green-->
+  <!--cuerpo-->
+  <!--sidebar-->
+  
+  <!--fin sidebar-->
+    <div style="clear: both"></div> 
+  <!--columna-->
+        <h2>Busqueda de paciente</h2>
+  <div id="block-left">
+    <div class="clear"></div><br />
+<!-- Formulario -->
+        <div id="datos-buscar">
+            <form>
+                <fieldset>
+                    <ul>
+                    <li><label> Documento de identidad</label>
+                            <select>
+                                <option>Opcion 1</option>
+                                <option>Opcion 2</option>
+                                <option>Valor 3</option>
+                            </select>
+                        <input type="text" class="doc">
+                        <i class="icon-large icon-search"></i><input name="" type="button" value="Buscar"/>
+                        
+                    </li>
+                    <li><label>Apellidos </label><input type="text"> <input type="text"></li>
+                    <li><label>Nombres </label><input type="text"> <input type="text"></li>
+  		            </ul>              
+	                </fieldset>
+            </form>
+        </div>
+<!-- fin formulario -->      
+  <div id="datos-res">
+      <ul>
+          <li class="col-header bg-verde">
+            <span class="col1">Nombres Y Apellidos</span> 
+            <span class="col2">Doc. Identidad</span> 
+            <span class="col3">Sexo</span>
+            <span class="col4">Fecha Nacimiento</span>
+          </li>
+          <li>
+              <span class="col1">Esteban Rafae Lopez Ramirez</span>
+              <span class="col2">V-11123123</span>
+              <span class="col3">M</span>
+              <span class="col4">14/12/1979</span>
+          </li>          
+          <li>
+              <span class="col1">Fulano segundo de Tal</span>
+              <span class="col2">V-13343564</span>
+              <span class="col3">M</span>
+              <span class="col4">31/12/1971</span>
+          </li>
+          <li>
+              <span class="col1">Roberto Pastor Hurtado Roberti</span>
+              <span class="col2">V-8909878</span>
+              <span class="col3">M</span>
+              <span class="col4">11/03/1980</span>
+          </li>
+          <li>
+              <span class="col1">Deinostri Filipo Dimitri Ricatoni</span>
+              <span class="col2">V-18756345</span>
+              <span class="col3">M</span>
+              <span class="col4">06/06/1996</span>
+          </li>
+          <li>
+              <span class="col1">John Albert Doe Slakcman</span>
+              <span class="col2">V-12330004</span>
+              <span class="col3">M</span>
+              <span class="col4">14/02/1987</span>
+          </li>          
+      </ul>
+      <br>
+  </div>   
+
+<!-- eliminar esta nota-->
+<p style="font-size:14px; color:red;">Nota: del lado derecho solo esta echa la pantalla de datos personales
+necesito los campos para hacer las otras 5 pantallas.  
+</p>
+      
+</div> <!-- Fin Bloque izquierdo -->
+
+<div id="block-right">
+    <div class="datos-paciente">
+        <img class="foto" src="images/perfil.jpg" width="120px" height="120px">
+        <ul class="top">
+            <li><h1>Guillermo Guillermo Gutierrez Delgado</h1></li>
+            <li>V-12123123</li>
+            <li>8 años</li>
+            <li class="link">
+                &emsp;<i class="icon-large icon-pencil"></i>
+                <a href="#">Notas Sobre el paciente</a> 
+                <span style="float:right;">
+                    <i class="icon-large icon-th-list"></i>
+                    <a href="#">Resumen de historias</a>
+                </span>
+            </li>    
+        </ul>
+    </div>
+    <div class="datos-pacientes-menu">
+        <ul>
+            <li id="btn-consulta"><i class="icon-3x icon-stethoscope"></i>Consulta Médica</li>
+            <li id="btn-datos"><i class="icon-3x icon-user"></i>Datos Personales</li>
+            <li id="btn-hisotria"><i class="icon-3x icon-file-text-alt"></i>Ver Historia</li>
+            <li id="btn-facturacion"><i class="icon-3x icon-credit-card"></i>Facturación</li>
+            <li id="btn-cita"><i class="icon-3x icon-plus-sign"></i>Nueva Cita</li>
+            <li id="btn-antecedentes"><i class="icon-3x icon-time"></i>Antecedentes</li>
+        </ul>
+    </div>    
+</div>      
+<!-- Fin Bloque derecho -->    
+  <div class="clear"></div>
+
+<!-- Popups -->
+
+<div class="popup" id="popup-datos">
+    <div class="header">
+        <div class="btn-close"><a href="#" id="close-btn"><i class="icon-large icon-remove"></i></a></div>
+    </div>
+    <div class="datos-paciente">
+        <img class="foto" src="images/perfil.jpg" width="120px" height="120px">
+        <ul class="bottom">
+            <li class="link" style="margin-bottom:0px;">
+                &emsp;<i class="icon-large icon-pencil"></i>
+                <a href="#">Notas Sobre el paciente</a> 
+                <span style="float:right;">
+                    <i class="icon-large icon-th-list"></i>
+                    <a href="#">Resumen de historias</a>
+                </span>
+            </li>    
+        </ul>
+    </div>
+
+    <div id="tabs" >
+        <ul>
+            <li><a href="#tabs-1">Datos Personales</a></li>
+            <li><a href="#tabs-2">Información de Contacto</a></li>
+            <li><a href="#tabs-3">Otra Opcion</a></li>
+        </ul>
+        <div id="tabs-1">  
+            <div class="tabs-contenido" >
+                <form>
+                    <fieldset>
+                        <ul>
+                        <li><label>Documento de identidad </label><input type="text" value="122123123" ></li>
+                        <li><label>Apellidos </label><input type="text" value="Gutierrez"> <input type="text" value="Delgado"></li>
+                        <li><label>Nombres </label><input type="text" value="Guillermo"> <input type="text" value="Guillermo"></li>
+                        <li><label>Sexo</label>
+                            <select>
+                                <option>Masculino</option>
+                                <option>Femenino</option>
+                            </select>
+                        </li>
+                        <li><label>Fecha de Nacimiento</label>
+                            <select>
+                                <option>Día</option>
+                            </select>
+                            <select>
+                                <option>Mes</option>
+                            </select>
+                            <select>
+                                <option>Año</option>
+                            </select>
+                        </li>    
+                        </ul>              
+                        </fieldset>
+                </form>
+            </div>
+            
+        </div> <!-- fin tab 1 -->
+        <div id="tabs-2">
+            <p>t2</p>
+        </div>
+        <div id="tabs-3">
+            <p> t3</p>
+        </div>
+    </div>     
+</div>
+    
+</div><!-- Fin Popups --> 
+
+    
+</div> 
+<script>
+	$(function() {
+		$("#tabs").tabs();
+	});
+</script>    
+</body>
+</html>
+
+
+
+
+
